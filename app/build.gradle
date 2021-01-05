@@ -1,0 +1,95 @@
+import dependencies.dependencies.*
+import dependencies.Application
+import dependencies.Versions
+import dependencies.AnnotationProcessing
+import dependencies.Java
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion Versions.compilesdk
+    buildToolsVersion Versions.buildToolsVersion
+
+    defaultConfig {
+        applicationId Application.id
+        minSdkVersion Versions.minsdk
+        targetSdkVersion Versions.targetsdk
+        versionCode Application.version_code
+        versionName Application.version_name
+
+        testInstrumentationRunner AndroidTestDependencies.instrumentation_runner
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = Java.java_version
+    }
+}
+
+dependencies {
+    //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation Dependencies.kotlin_standard_library
+    implementation Dependencies.ktx
+    implementation SupportDependencies.appcompat
+    implementation SupportDependencies.material_design
+    implementation SupportDependencies.constraintlayout
+    implementation project(path: ':core')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation TestDependencies.junit4
+    androidTestImplementation AndroidTestDependencies.androidx_test_ext
+    androidTestImplementation AndroidTestDependencies.espresso_core
+    implementation SupportDependencies.cardview
+
+    // koin
+    implementation Dependencies.koin
+    implementation Dependencies.koin_lifecycle
+    implementation Dependencies.koin_viewModel
+
+    // androidx.fragment
+    implementation Dependencies.fragment
+
+    //nav
+    implementation Dependencies.navigation_fragment
+    implementation Dependencies.navigation_ui
+
+    //glide
+    implementation Dependencies.glide
+    annotationProcessor AnnotationProcessing.glide
+
+    //lifecycle
+    implementation Dependencies.lifecycle_viewModel
+    implementation Dependencies.lifecycle_livedata
+
+    // coroutine
+    implementation Dependencies.kotlin_coroutines_android
+
+    // room database
+    implementation Dependencies.room_runtime
+    implementation Dependencies.room_ktx
+    kapt AnnotationProcessing.room_compiler
+
+    // network
+    implementation Dependencies.retrofit
+    implementation Dependencies.retrofit_moshi
+    implementation Dependencies.okhttp
+    implementation Dependencies.okhttp_interceptor
+    implementation Dependencies.retrofit_coroutine_adapter
+    implementation Dependencies.network_response
+
+
+}

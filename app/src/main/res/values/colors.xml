@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="textColor">#4f4f4f</color>
+    <color name="textColorLight">#ffffff</color>
+    <color name="textSecondary">#808080</color>
+
+    <color name="backgrounds">#FFFFFF</color>
+    <color name="backgroundsDark">#D3D3D3</color>
+
+    <color name="iconColorHeavyDark">#0F3312</color>
+    <color name="iconColorDark">#1B5E20</color>
+    <color name="iconColorGray">#b2b2b2</color>
+    <color name="iconColorLight">#FFFFFF</color>
+
+    <color name="gray">#b2b2b2</color>
+    <color name="grayClicked">#8E8D8D</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="whiteClicked">#EBE6E6</color>
+    <color name="primaryClicked">#46B175</color>
+    <color name="accentClicked">#E4A03F</color>
+    <color name="transparentClicked">#22000000</color>
+
+    <color name="toastBackground">#AA000000</color>
+    <color name="searchViewBackground">#55FFFFFF</color>
+    <color name="cropBackground">#88000000</color>
+
+    <color name="negativeColor">#BF360C</color>
+    <color name="positiveColor">#44b9e7</color>
+
+    <color name="chatOtherColor">#B0FEEC</color>
+
+    <color name="filterBackground">#424141</color>
+    <color name="filterItem">#878787</color>
+
+</resources>

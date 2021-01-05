@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- pressed -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/transparentClicked"/>
+        </shape>
+    </item>
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/transparentClicked"/>
+        </shape>
+    </item>
+
+    <!-- not pressed -->
+    <item android:state_pressed="false">
+        <shape android:shape="oval">
+            <solid android:color="@color/transparent"/>
+        </shape>
+    </item>
+
+    <!-- default -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/transparent"/>
+        </shape>
+    </item>
+
+</selector>

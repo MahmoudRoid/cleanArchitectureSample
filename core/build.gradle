@@ -1,0 +1,31 @@
+import dependencies.AnnotationProcessing
+import dependencies.dependencies.Dependencies
+
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    api Dependencies.kotlin_standard_library
+    api Dependencies.ktx
+    api Dependencies.lifecycle_livedata
+    api AnnotationProcessing.room_compiler
+    api Dependencies.retrofit
+    api Dependencies.network_response
+
+}
